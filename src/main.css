@@ -12,9 +12,8 @@
 }
 html{
     scroll-snap-type: y mandatory; 
-    scroll-behavior: smooth;
-    
-    
+    /* scroll-behavior: smooth; */
+    scroll-snap-stop: always;
 }
 select{
     border-bottom: 1px solid black;
@@ -59,7 +58,7 @@ select:hover{
 
 .downarrow {
     position: absolute;
-    bottom: 3vh;
+    bottom: 5%;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -135,7 +134,7 @@ select:hover{
 
 .uparrow {
     position: absolute;
-    top: 80px;
+    top: 10%;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -179,7 +178,7 @@ img{
 }
 h1{
     position: absolute;
-    top: 130px;
+    top: 16%;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -249,23 +248,22 @@ div > a{
     transform: scaleX(1);
 }
 
-.projects-container .card{
+/* .projects-container .card{
     min-width: 20rem;
     min-height: 25rem;
     position: relative;
-}
+} */
 .projects-container .card a:last-child {
     position: absolute;
-    bottom: 20px;
 }
 
 .projects-container p {
     white-space: pre-line;
 }
-.skills-container .card{
+/* .skills-container .card{
     min-width: 18rem;
     min-height: 18rem;
-}
+} */
 
 .card p, .card li,.skills-container .card h5, .skills-container h1,.projects-container h1:first-child{
     cursor: default;

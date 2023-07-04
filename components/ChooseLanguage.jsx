@@ -11,11 +11,11 @@ export function ChooseLanguage({
   return (
     <Dialog open={isOpen} className="test-component select-none" onClose={() => setIsOpen(true)}>
       <Dialog.Panel>
-        <Dialog.Title className="text-center text-2xl pb-2 pointer-events-none">Welcome on my resume page!</Dialog.Title>
-        <Dialog.Description className="text-center pointer-events-none">
+        <Dialog.Title className="text-center lg:text-2xl mobile:text-xs pb-2 pointer-events-none">Welcome on my resume page!</Dialog.Title>
+        <Dialog.Description className="text-center lg:text-base mobile:text-xs pointer-events-none">
           Please choose preffered langauge.
         </Dialog.Description>
-        <Dialog.Description className="text-center font-bold pointer-events-none">
+        <Dialog.Description className="text-center lg:text-base mobile:text-xs font-bold pointer-events-none">
           This option will be saved for later.
         </Dialog.Description>
 

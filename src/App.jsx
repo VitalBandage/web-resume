@@ -98,8 +98,8 @@ export default function App() {
         </div>
       </div>
     </div>
-    <div ref={SkillsRef}>
-      <Skills
+    <div ref={SkillsRef} className={!isOpen ? " " : "hidden"}>
+      <Skills 
         scrollTo={scrollTo}
         backToSectionRef ={AboutRef}
         goToSectionRef = {ProjectsRef}
@@ -108,7 +108,7 @@ export default function App() {
         currentLanguage={currentLanguage}
       />
     </div>
-    <div ref={ProjectsRef} className={!isOpen ? " " : "blur-bg"}>
+    <div ref={ProjectsRef} className={!isOpen ? " " : "hidden"}>
       <Projects
         scrollTo={scrollTo}
         goToSectionRef = {SkillsRef}
