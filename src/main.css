@@ -63,7 +63,7 @@ select:hover{
     left: 0;
     right: 0;
     margin: 0 auto;
-    background-image: url("./downarrow.svg");
+    background-image: url("../images/downarrow.svg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 40px;
@@ -139,7 +139,7 @@ select:hover{
     left: 0;
     right: 0;
     margin: 0 auto;
-    background-image: url("./uparrow.svg");
+    background-image: url("../images/uparrow.svg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 40px;

@@ -21,7 +21,7 @@ export function ChooseLanguage({
 
         <div className='flex flex-row gap-8 pt-2 justify-center align-center'>
           <div className='flex flex-col gap-2 justify-center align-center'>
-            <img className='pointer-events-none' src='./English_flag.svg'></img>
+            <img className='pointer-events-none' src='./images/English_flag.svg'></img>
             <button onClick={() => {
               setIsOpen(false)
               localStorage.setItem('language','en')
@@ -29,7 +29,7 @@ export function ChooseLanguage({
             }}>English</button>
           </div>
           <div className='flex flex-col gap-2 justify-center align-center'>
-            <img className='pointer-events-none' src='./Polish_flag.svg'></img>
+            <img className='pointer-events-none' src='./images/Polish_flag.svg'></img>
             <button onClick={() => {
               setIsOpen(false)    
               localStorage.setItem('language','pl')

@@ -108,7 +108,7 @@ export default function App() {
         currentLanguage={currentLanguage}
       />
     </div>
-    <div ref={ProjectsRef}>
+    <div ref={ProjectsRef} className={!isOpen ? " " : "blur-bg"}>
       <Projects
         scrollTo={scrollTo}
         goToSectionRef = {SkillsRef}

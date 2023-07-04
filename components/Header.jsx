@@ -47,7 +47,7 @@ export function Header({
         <>
         <div className="relative z-10">
             <div className='language-selector fixed flex flex-row translate-y-3/4 translate-x-1/4 z-20'>
-                    <img className='language-img' src='./earth_globe.png'></img>
+                    <img className='language-img' src='./images/earth_globe.svg'></img>
                     {currentLanguage == "en" && (
                         <select onChange={(e)=>{
                             setCurrentLanguage(e.target.value)
@@ -113,11 +113,11 @@ export function Header({
                     }}>
                         <div ref={ref} className='popup fixed grid grid-cols-2 auto-rows-min font-xl gap-5 justify-center content-center'>
                             <a target='blank' href={APP_CONFIG.LINKEDIN_URL} className='flex flex-col text-center justify-center align-center h-20'>
-                                <img src='./LinkedIn_icon.svg'></img>
+                                <img src='./images/LinkedIn_icon.svg'></img>
                                 <a>Linkedin</a>
                             </a>
                             <a target='blank'  href={APP_CONFIG.GITHUB_URL} className='flex flex-col text-center justify-center align-center h-20'>
-                                <img src='./github_icon.svg'></img>
+                                <img src='./images/github_icon.svg'></img>
                                 <a>Github</a>
                             </a>
                             <div className='col-span-full pt-1 pointer-events-none email'>email: kacperoleksiak@o2.pl</div>
