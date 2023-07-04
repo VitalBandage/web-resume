@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+html{
+    scroll-snap-type: y mandatory; 
+    scroll-behavior: smooth;
+    
+    
+}
+select{
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+select:hover{
+    cursor: pointer;
+}
+.scroll-snap-container{
+    position: relative;
+    overscroll-behavior-y: contain;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+
+}   
+
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+.typing-effect {
+    width: 13ch;
+    animation: start-width 2.1s,typing 2s steps(25) 2s, blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    transition: width 1s;
+}
+.typing-effect-info {
+    width: 21ch;
+    animation: anim-vis 4.1s,start-width-info 4.1s,typing-info 2s steps(25) 4s, blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+}
+
+.downarrow {
+    position: absolute;
+    bottom: 3vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-image: url("./downarrow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+}
+.downarrow:focus, select{
+    outline: none !important
+}
+.test-button{
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+}
+
+/* Dialog test css */
+.test-component {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: max-content;
+    height: max-content;
+    background-color: gainsboro;
+    border: 1px solid black;
+    border-radius: 8px;
+    z-index: 2;
+    padding: 0.5rem;
+    animation: opacity-in 1s;
+}
+
+.test-component button{
+    padding: 5px;
+    text-decoration: none;
+    position: relative;
+    color: #000;
+}
+.test-component button:focus{
+    outline: none;
+    box-shadow: none;
+}
+.test-component button:hover{
+    color:#000
+}
+.test-component button::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.test-component button:hover::before{
+    transform: scaleX(1);
+}
+
+/* End of test component css */
+
+.uparrow {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-image: url("./uparrow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+}
+.popup{
+    right:5px;
+    top:6vh;
+    border: 2px solid black;
+    background-color: transparent;
+    border-radius: 8px;
+    font-size:14px;
+    padding:1rem;
+    z-index: 1;
+    animation: opacity-in 0.2s ease-in;
+    background-color: rgb(251, 249, 249);
+    height: max-content;
+
+}
+.popup-out{
+    animation: opacity-out 0.2 ease-out;
+}
+img{
+    display: block;
+    margin: auto;
+    height: 48px;
+    width: 48px;
+    object-fit: contain;
+}
+.language-img{
+    display: block;
+    margin: auto;
+    height: 24px;
+    width: 24px;
+    object-fit: contain;
+}
+h1{
+    position: absolute;
+    top: 130px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: max-content;
+    height: max-content;
+    z-index: 3;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+div > a{
+    padding-top: 5px;
+}
+.popup > a:hover{
+    background-color: gainsboro;
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+}
+.header-buttons, .projects-container a{
+    text-decoration: none;
+    position: relative;
+    color: #000;
+}
+.header-buttons:hover, .projects-container a:hover{
+    color: #000;
+}
+
+.header-buttons::before, .projects-container a:last-child:before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+.header-buttons:hover::before , .projects-container a:last-child:hover::before{
+    transform: scaleX(1)
+}
+
+.skills-container > .card h5{
+    text-decoration: none;
+    position: relative;
+    color: #000;
+}
+.skills-container > .card h5:hover{
+    color: #000;
+}
+.skills-container > .card h5::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50%;
+    height: 2px;
+    bottom: 0;
+    left: 25%;
+    background-color: #000;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.skills-container > .card:hover > h5::before
+{
+    transform: scaleX(1);
+}
+
+.projects-container .card{
+    min-width: 20rem;
+    min-height: 25rem;
+    position: relative;
+}
+.projects-container .card a:last-child {
+    position: absolute;
+    bottom: 20px;
+}
+
+.projects-container p {
+    white-space: pre-line;
+}
+.skills-container .card{
+    min-width: 18rem;
+    min-height: 18rem;
+}
+
+.card p, .card li,.skills-container .card h5, .skills-container h1,.projects-container h1:first-child{
+    cursor: default;
+}
+
+a:checked, a:focus{
+    border:0 !important;
+    outline: none !important;
+    box-shadow: none !important
+}
+
+.email,.footer-text{
+    -webkit-user-select: none;
+    -ms-user-select: none; 
+    user-select: none;
+    color:lightslategray
+}
+
+.blur-bg{
+    -webkit-filter: blur(5px); /* Chrome, Safari, Opera */
+    filter: blur(5px);
+    /* for animation purposes */
+}
+
+.blur-bg div:last-child, .blur-bg div:nth-last-child(2){
+    animation-play-state: paused;
+}
+
+
+
+
+@keyframes opacity-in {
+    from{
+        opacity: 0
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes opacity-out {
+    from{
+        opacity: 1
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes start-width{
+    from{
+        width: 0;
+    }
+    to{
+        width: 0;
+    }
+}
+@keyframes start-width-info{
+    from{
+        width: 0;
+    }
+    to{
+        width: 0;
+    }
+}
+@keyframes typing {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 13ch;
+    }
+}
+    
+@keyframes typing-info {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 21ch;
+    }
+}
+    
+@keyframes blink {
+    
+50% {
+    border-color: transparent
+}
+}

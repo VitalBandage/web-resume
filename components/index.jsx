@@ -1,0 +1,6 @@
+export {About} from './About'
+export {ChooseLanguage} from './ChooseLanguage'
+export {Footer} from './Footer'
+export {Header} from './Header'
+export {Projects} from './Projects'
+export {Skills} from './Skills'
